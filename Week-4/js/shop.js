@@ -1,0 +1,91 @@
+var shop = {
+	customerName: "Raisin",
+	total: 0,
+	products: [
+	"Brooklyn T-Shirt White", 
+    "Brooklyn T-Shirt Black", 
+    "Apple Watch", 
+    "Android Phone"
+	],
+    prices: [10,10,199,159],
+    displayCustomerName: function() {
+    	var el = document.getElementById("name");
+    	el.textContent = 
+    	    shop.customerName;
+    },
+    displayProducts: function() {
+    	var productsText = "";
+        var productsElement = document.getElementById("product-list");
+        for(var i = 0; i<this.products.length;i++) {
+	        productsText += "<li class='list-group-item'><span class='badge'>$"+
+	        this.prices[i]+"</span>"+this.products[i]+"</li>";
+	         this.total += this.prices[i];
+        }
+        productsElement.innerHTML = productsText;
+
+        var totalPriceElement = document.getElementById("total-price");
+        totalPriceElement.textContent = this.total-(this.total*0.25);
+
+    }
+};
+shop.displayCustomerName();
+shop.displayProducts();
+// var products = [
+// 	"Brooklyn T-Shirt White", 
+// 	"Brooklyn T-Shirt Black", 
+// 	"Apple Watch", 
+// 	"Android Phone"
+// ];
+// var prices = [10,10,199,159];
+
+// var customerName = "Marina";
+// var total = 0;
+// var customer = document.getElementById("name");
+// customer.textContent = customerName;
+
+
+// var productsText = "";
+// var productsElement = document.getElementById("product-list");
+
+// for(var i = 0; i<products.length;i++) {
+
+// 	productsText += "<li class='list-group-item'><span class='badge'>$"+prices[i]+"</span>"+products[i]+"</li>";
+// 	total += prices[i];
+// }
+
+
+// productsElement.innerHTML = productsText;
+
+// var totalPriceElement = document.getElementById("total-price");
+// totalPriceElement.textContent = total;
+
+var d = new Date();
+if(d.getHours() >= 5 && d.getHours() <= 11) {
+    document.getElementById("greeting").innerHTML = "Good Morning";
+} else if(d.getHours() >= 11 && d.getHours <= 17) {
+    document.getElementById("greeting").innerHTML = "Good Afternoon";
+} else {
+    document.getElementById("greeting").innerHTML = "Good Evenning";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
