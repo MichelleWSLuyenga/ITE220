@@ -14,7 +14,7 @@ window.onload = function() {
 						//console.log(temp);
 
 						var ele = document.getElementById("temp");
-						ele.textContent = temp;
+						ele.textContent = temp.toFixed(2);
 
 						var icon = data.weather[0].
 						 icon;
@@ -42,7 +42,7 @@ window.onload = function() {
 						//console.log(temp);
 
 						var ele = document.getElementById("temp");
-						ele.textContent = temp;
+						ele.textContent = temp.toFixed(2);
 
 						var icon = data.weather[0].
 						 icon;
@@ -70,7 +70,7 @@ window.onload = function() {
 						//console.log(temp);
 
 						var ele = document.getElementById("temp");
-						ele.textContent = temp;
+						ele.textContent = temp.toFixed(2);
 
 						var icon = data.weather[0].
 						 icon;
